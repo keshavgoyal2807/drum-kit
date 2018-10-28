@@ -9,11 +9,11 @@ window.addEventListener('keydown',function(e){
   a.play();
   key.classList.add('playing');
   var key1=document.querySelectorAll('.first');
-  key1.forEach(key2 => key2.addEventListener('transitionend',function(e){
+  key1.forEach(key => key.addEventListener('transitionend',function(e){
     if(e.propertyName!=='transform')
     {
       return;
     }
-    this.classList.remove('playing');
+    key.classList.remove('playing');
   }));
 });
